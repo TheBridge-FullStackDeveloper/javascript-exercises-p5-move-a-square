@@ -1,3 +1,5 @@
+![image](https://github.com/TheBridge-FullStackDeveloper/javascript-exercises-p5-move-a-square/assets/33903092/325ed165-e8b8-4742-b79a-1e823645a6ac)
+
 ## Instrucciones para el ejercicio en p5.js: Mover un Cuadro
 
 **Objetivo:** Diseñar un cuadro y utilizar las teclas de flecha para moverlo por el lienzo.
