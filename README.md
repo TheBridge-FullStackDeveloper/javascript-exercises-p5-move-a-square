@@ -33,7 +33,7 @@ https://github.com/TheBridge-FullStackDeveloper/javascript-exercises-p5-move-a-s
 
 ¡Listo! Ahora has creado un ejercicio en el que puedes diseñar un cuadro y moverlo por el lienzo utilizando las teclas de flecha. Puedes personalizar el ejercicio y experimentar con diferentes valores para comprender mejor p5.js y la programación creativa.
 
-## Bonus 🏆
+## Bonus 🏆
 
 - Intenta crear objetos con los que el cuadrado pueda chocar
 - Habilita la capacidad del cuadrado para saltar al presionar la tecla de espacio y asegúrate de que vuelva a descender como si estuviera bajo la influencia de la gravedad
