@@ -4,6 +4,8 @@
 
 **Objetivo:** Diseñar un cuadro y utilizar las teclas de flecha para moverlo por el lienzo.
 
+https://github.com/TheBridge-FullStackDeveloper/javascript-exercises-p5-move-a-square/assets/33903092/f4ca0403-85d1-473a-ad1a-200a6b5d0b28
+
 ### Paso 1: Configuración del lienzo
 
 - Crea un lienzo de 400x400 píxeles utilizando `createCanvas(400, 400);`.
@@ -30,3 +32,8 @@
 - Ajusta la velocidad de movimiento cambiando la cantidad que aumentas o disminuyes `x` y `y` cuando se presionan las teclas.
 
 ¡Listo! Ahora has creado un ejercicio en el que puedes diseñar un cuadro y moverlo por el lienzo utilizando las teclas de flecha. Puedes personalizar el ejercicio y experimentar con diferentes valores para comprender mejor p5.js y la programación creativa.
+
+## Bonus 🏆
+
+- Intenta crear objetos con los que el cuadrado pueda chocar
+- Habilita la capacidad del cuadrado para saltar al presionar la tecla de espacio y asegúrate de que vuelva a descender como si estuviera bajo la influencia de la gravedad
