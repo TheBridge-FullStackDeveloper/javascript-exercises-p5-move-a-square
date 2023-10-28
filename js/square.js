@@ -1,5 +1,5 @@
 let x, y;
-const speedMove = 5;
+const speedMove = 10;
 
 function setup() {
   createCanvas(400, 400);
@@ -9,7 +9,7 @@ function setup() {
 
 function draw() {
   background(220);
-  fill(255, 0, 0);
-  rect(x, y, 50, 50);
+  fill(230, 156, 70);
+  rect(x, y, 75, 75);
 }
 
