@@ -1,38 +1,45 @@
-let SquareX = 50; // Posición inicial en el eje X
-let SquareY = 50; // Posición inicial en el eje Y
-let squareSide = 50; // Tamaño del cuadrado
-let xSpeed = 10 // Velocidad en el eje X
-let ySpeed = 10; // Velocidad en el eje Y
-let canvasWidth = 400; // Ancho del canvas
-let canvasHeight = 400; // Alto del canvas
+let square = {
+  x: 175,
+  y: 175,
+  size: 50,
+  speed: 5
+};
+
+let xSpeed = 0;
+let ySpeed = 0;
 
 function setup() {
-  createCanvas(canvasWidth, canvasHeight); // Crea un lienzo de 400x400 píxeles
+  createCanvas(400, 400);
 }
 
 function draw() {
-  background(220); // Establece el fondo del lienzo en gris claro
-  fill(255, 0, 0); // Relleno rojo
-  rect(SquareX, SquareY, squareSide, squareSide);
-  
- 
+  background(150);
+  fill(255, 0, 0);
+  rect(square.x, square.y, square.size, square.size);
 
-  // Verifica las colisiones con los lados del canvas
-  if (SquareX + squareSide > canvasWidth || SquareX < 0) {
-    xSpeed === 0; // Cambia la dirección en el eje X al tocar un lado
-  }
-  if (SquareY + squareSide > canvasHeight || SquareY < 0) {
-    ySpeed === 0 // Cambia la dirección en el eje Y al tocar la parte superior o inferior
+  square.x = constrain(square.x, 0, width - square.size);
+  square.y = constrain(square.y, 0, height - square.size);
+
+  square.x += xSpeed;
+  square.y += ySpeed;
+}
+
+function keyPressed() {
+  if (key === 'ArrowUp') {
+    ySpeed = -square.speed;
+  } else if (key === 'ArrowDown') {
+    ySpeed = square.speed;
+  } else if (key === 'ArrowLeft') {
+    xSpeed = -square.speed;
+  } else if (key === 'ArrowRight') {
+    xSpeed = square.speed;
   }
 }
-function keyPressed() {
-    if (keyCode === LEFT_ARROW) {
-        SquareX -= xSpeed;
-    } else if (keyCode === RIGHT_ARROW) {
-        SquareX += xSpeed;
-    } else if (keyCode === UP_ARROW) {
-        SquareY -= ySpeed;
-    } else if (keyCode === DOWN_ARROW) {
-        SquareY += ySpeed;
-    }
+
+function keyReleased() {
+  if (key === 'ArrowUp' || key === 'ArrowDown') {
+    ySpeed = 0;
+  } else if (key === 'ArrowLeft' || key === 'ArrowRight') {
+    xSpeed = 0;
+  }
 }
