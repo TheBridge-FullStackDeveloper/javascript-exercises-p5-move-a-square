@@ -10,6 +10,6 @@ function setup() {
 function draw() {
   background(220);
   fill(230, 156, 70);
-  rect(x, y, 75, 75);
+  rect(x, y, 70, 70);
 }
 
