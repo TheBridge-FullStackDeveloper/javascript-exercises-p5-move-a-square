@@ -2,6 +2,8 @@ let square = {
   x: 0,
   y: 350,
   size: 50,
+  gravity: 0.4,
+  ySpeed: 0,
 };
 
 function setup() {
@@ -40,6 +42,18 @@ function move() {
     if (square.x + 5 <= 400 - square.size) {
       nuevaX = square.x + 5;
     }
+  }
+
+  if (keyIsDown(32) && square.y == 350) {
+    square.ySpeed = -10;
+  }
+
+  square.ySpeed += square.gravity;
+  nuevaY += square.ySpeed;
+  
+  if (nuevaY >= 350) {
+    nuevaY = 350;
+    square.ySpeed = 0;
   }
 
   if (
