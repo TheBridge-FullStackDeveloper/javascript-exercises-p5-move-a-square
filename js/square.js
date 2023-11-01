@@ -21,6 +21,7 @@ class Square {
     this.ySpeed += this.gravity;
     this.y += this.ySpeed;
     this.x += this.xSpeed;
+    
 
     if (keyIsDown(LEFT_ARROW)) {
       if (this.x - 5 >= 0) {
@@ -43,6 +44,12 @@ class Square {
           this.x += 5;
         }
       }
+    }
+
+    if (this.collide(obstacle) && this.y < obstacle.y) {
+      this.y = obstacle.y - this.side;
+      this.ySpeed = 0;
+      
     }
 
     if (this.y + this.side >= canvasSize.height) {
